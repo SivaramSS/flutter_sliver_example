@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple, primary: Colors.green),
           useMaterial3: true,
           appBarTheme: const AppBarTheme(
-              // centerTitle: Platform.isIOS,
               backgroundColor: Colors.white,
               surfaceTintColor: Colors.white,
               iconTheme: IconThemeData(color: Color(0xff5e6e7e)),
@@ -30,15 +29,13 @@ class MyApp extends StatelessWidget {
                 statusBarIconBrightness: Brightness.dark,
                 systemNavigationBarColor: Colors.white,
               ))),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key,});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
