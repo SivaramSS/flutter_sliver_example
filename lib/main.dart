@@ -7,35 +7,27 @@ void main() {
       statusBarColor: Colors.white,
       systemNavigationBarColor: Colors.white,
       statusBarBrightness: Brightness.light));
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple, primary: Colors.green),
-          useMaterial3: true,
-          appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.white,
-              surfaceTintColor: Colors.white,
-              iconTheme: IconThemeData(color: Color(0xff5e6e7e)),
-              systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarBrightness: Brightness.light,
-                statusBarIconBrightness: Brightness.dark,
-                systemNavigationBarColor: Colors.white,
-              ))),
-      home: const MyHomePage(),
-    );
-  }
+  runApp(MaterialApp(
+    title: 'Flutter Demo',
+    theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple, primary: Colors.green),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+            surfaceTintColor: Colors.white,
+            iconTheme: IconThemeData(color: Color(0xff5e6e7e)),
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarBrightness: Brightness.light,
+              statusBarIconBrightness: Brightness.dark,
+              systemNavigationBarColor: Colors.white,
+            ))),
+    home: const MyHomePage(),
+  ));
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key,});
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -96,6 +88,8 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 40,
               width: double.infinity,
               color: Colors.lightBlueAccent,
+              alignment: Alignment.center,
+              child: Text("Flutter Slivers", style: TextStyle(fontSize: 32),),
             ),
           ),
           ValueListenableBuilder(
